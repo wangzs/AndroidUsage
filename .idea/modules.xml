@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidUsage.iml" filepath="$PROJECT_DIR$/AndroidUsage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anticrack/anticrack.iml" filepath="$PROJECT_DIR$/anticrack/anticrack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jnibase/jnibase.iml" filepath="$PROJECT_DIR$/jnibase/jnibase.iml" />
+    </modules>
+  </component>
+</project>
