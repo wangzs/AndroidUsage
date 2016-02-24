@@ -23,6 +23,7 @@ android {
 
 dependencies {
     compile project(':anticrack')
+    compile project(':jnibase')
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile rootProject.ext.test.junit

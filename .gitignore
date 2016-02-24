@@ -1,8 +1,13 @@
 *.iml
+*.setup
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+.idea/
 .DS_Store
+/local.properties
 /build
 /captures
+jnibase/src/main/obj
+jnibase/src/main/libs/armeabi/gdbserver
+jnibase/src/main/libs/armeabi-v7a/gdbserver
+.idea/runConfigurations.xml
+.idea/gradle.xml
