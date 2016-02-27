@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/anticrack" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/jnibase" />
+            <option value="$PROJECT_DIR$/netbase" />
           </set>
         </option>
       </GradleProjectSettings>

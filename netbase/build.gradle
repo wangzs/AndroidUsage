@@ -1,13 +1,12 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.wangzs.android.androidusage"
-        minSdkVersion 15
-        targetSdkVersion 22
+        minSdkVersion 9
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -17,16 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-
 }
 
 dependencies {
-    compile project(':anticrack')
-    compile project(':jnibase')
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile rootProject.ext.test.junit
     compile rootProject.ext.androidsupport.compatv7
-    compile rootProject.ext.androidsupport.design
 }

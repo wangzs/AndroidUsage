@@ -11,3 +11,4 @@ jnibase/src/main/libs/armeabi/gdbserver
 jnibase/src/main/libs/armeabi-v7a/gdbserver
 .idea/runConfigurations.xml
 .idea/gradle.xml
+.idea/gradle.xml

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/first_item"
+            android:icon="@mipmap/ic_cast_connected_black_24dp"
+            android:title="资讯" />
+        <item android:id="@+id/second_item"
+            android:icon="@mipmap/ic_public_black_24dp"
+            android:title="社交" />
+    </group>
+
+    <item android:title="联系方式">
+        <menu>
+            <item android:id="@+id/contact_item"
+                android:icon="@mipmap/ic_folder_shared_black_24dp"
+                android:title="分享" />
+            <item android:id="@+id/feedback_item"
+                android:icon="@mipmap/ic_feedback_black_24dp"
+                android:title="反馈" />
+        </menu>
+    </item>
+</menu>

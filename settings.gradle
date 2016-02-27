@@ -1,1 +1,1 @@
-include ':app', ':anticrack', ':jnibase'
+include ':app', ':anticrack', ':jnibase', ':netbase'

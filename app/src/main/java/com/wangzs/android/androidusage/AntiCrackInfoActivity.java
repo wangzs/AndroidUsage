@@ -2,6 +2,7 @@ package com.wangzs.android.androidusage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.wangzs.android.anticrack.AntiCrackTools;
@@ -20,6 +21,11 @@ public class AntiCrackInfoActivity extends AppCompatActivity {
     }
 
     private void initUI() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("AntiCrack");    // need use this change toolbar title
+        //toolbar.setTitle("AntiCrack");
+
         anti_crack_info_tv = (TextView)findViewById(R.id.anti_crack_info_tv);
         anti_crack_info_tv.setText(getAntiCrackInfo());
     }

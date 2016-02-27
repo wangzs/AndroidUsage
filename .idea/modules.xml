@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/anticrack/anticrack.iml" filepath="$PROJECT_DIR$/anticrack/anticrack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jnibase/jnibase.iml" filepath="$PROJECT_DIR$/jnibase/jnibase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netbase/netbase.iml" filepath="$PROJECT_DIR$/netbase/netbase.iml" />
     </modules>
   </component>
 </project>
