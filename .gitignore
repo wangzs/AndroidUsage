@@ -12,3 +12,10 @@ jnibase/src/main/libs/armeabi-v7a/gdbserver
 .idea/runConfigurations.xml
 .idea/gradle.xml
 .idea/gradle.xml
+jnibase/src/main/jni/sln/.vs/jnibase/v14/.suo
+*.opensdf
+jnibase/src/main/jni/sln/jnibase.sdf
+jnibase/src/main/jni/sln/jnibase.vcxproj.user
+jnibase/src/main/jni/sln/Debug
+jnibase/src/main/jni/sln/x64
+jnibase/src/main/jni/sln/jnibase.vcxproj.filters

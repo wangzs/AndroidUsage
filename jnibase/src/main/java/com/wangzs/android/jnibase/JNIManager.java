@@ -13,7 +13,6 @@ public class JNIManager {
     private JNIManager() {
         System.loadLibrary("jnibase");
     }
-
-
+    
     public static native void testJni();
 }
