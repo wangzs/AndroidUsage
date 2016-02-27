@@ -7,7 +7,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary">
+        android:background="?attr/colorPrimaryDark">
         <ImageButton
             android:id="@+id/back_btn"
             android:layout_width="wrap_content"
@@ -23,8 +23,7 @@
             android:singleLine="true"
             android:text="Toolbar Title"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"/>
     </android.support.v7.widget.Toolbar>
 
     <TextView
