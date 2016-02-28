@@ -29,4 +29,5 @@ dependencies {
     testCompile rootProject.ext.test.junit
     compile rootProject.ext.androidsupport.compatv7
     compile rootProject.ext.androidsupport.design
+    compile rootProject.ext.baselib.logutils
 }

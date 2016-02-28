@@ -1,11 +1,11 @@
 package com.wangzs.android.androidusage;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initUI() {
-        antiCrackToolBtn = (Button)findViewById(R.id.anticrack_tool_btn);
+        antiCrackToolBtn = (Button) findViewById(R.id.anticrack_tool_btn);
         antiCrackToolBtn.setOnClickListener(new OnItemClickListener());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView)findViewById(R.id.navigate_content_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigate_content_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         View navigationHeader = navigationView.getHeaderView(0);
-        TextView userNameView = (TextView)navigationHeader.findViewById(R.id.user_name_tv);
-        TextView userMailView = (TextView)navigationHeader.findViewById(R.id.user_mail_tv);
+        TextView userNameView = (TextView) navigationHeader.findViewById(R.id.user_name_tv);
+        TextView userMailView = (TextView) navigationHeader.findViewById(R.id.user_mail_tv);
         userNameView.setText("Android Material Design");
         userMailView.setText("new_user_mail@gmail.com");
     }
