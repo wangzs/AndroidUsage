@@ -27,7 +27,7 @@
 
 #define LOG_TAG "JNI2CPP"
 
-#if defined(_DEBUG)
+#if defined(DEBUG)
 	#define LOG_V(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
 	#define LOG_D(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #else
@@ -154,7 +154,6 @@ namespace java {
 		public:
 			class Scope {
 			private:
-				bool is_attached {false};
 				JNIEnv* _prev;
 			public:
 				Scope(JNIEnv* env) {
@@ -167,16 +166,10 @@ namespace java {
 					//jint res = vm->AttachCurrentThread((void**)&env, NULL);
 					jint res = reinterpret_cast<jint(*)(JavaVM*, void**, void*)>(vm->functions->AttachCurrentThread)(vm, (void**)&env, NULL);
 					assert(res == JNI_OK);
-					is_attached = true;
 					_prev = _getcur();
 					_setcur(env);
 				}
-				~Scope() {
-					if (is_attached) {
-						JavaVM* vm = nullptr;
-						_getcur()->GetJavaVM(&vm);
-						vm->DetachCurrentThread();
-					}
+ 				~Scope() {
 					_setcur(_prev);
 				}
 			};
@@ -200,14 +193,13 @@ namespace java {
 			}
 #else
 			static JNIEnv** _cur() {
-				static JNIPP_THREAD_LOCAL JNIEnv* value = nullptr;
-				return &value;
+				return &value_;
 			}
 			static JNIEnv* _getcur() {
-				return *(_cur());
+				return value_;
 			}
 			static void _setcur(JNIEnv* val) {
-				*(_cur()) = val;
+				value_ = val;
 			}
 #endif
 		public:
@@ -249,6 +241,9 @@ namespace java {
 				assert(res == 0);
 				return result;
 			}
+
+			private:
+				static JNIEnv* value_;
 		};
 
 		////////////////////////////////////////////////////////////////////////////////

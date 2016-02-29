@@ -1,5 +1,7 @@
 package com.wangzs.android.jnibase;
 
+import android.content.Context;
+
 /**
  * Created by wangzs on 2016/2/24.
  */
@@ -14,5 +16,5 @@ public class JNIManager {
         System.loadLibrary("jnibase");
     }
     
-    public static native void testJni();
+    public static native void testJni(Context context);
 }

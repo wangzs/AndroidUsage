@@ -140,6 +140,8 @@
   <ItemGroup>
     <ClCompile Include="..\com_wangzs_android_jnibase_JNIManager.cpp" />
     <ClCompile Include="..\JniCpp.cpp" />
+    <ClCompile Include="..\test\test.cpp" />
+    <ClCompile Include="..\test\test.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Android.mk" />

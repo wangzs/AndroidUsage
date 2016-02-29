@@ -1,7 +1,7 @@
 # warning: UTF-8 Bom format
 LOCAL_PATH:= $(call my-dir)
 # strange bug: LOCAL_PATH -> android-ndk-r10e/sources/cxx-stl/gnu-libstdc++
-$(warning  " LOCAL_PATH =  $(LOCAL_PATH)")
+# $(warning  " LOCAL_PATH =  $(LOCAL_PATH)")
 
 ### ====> 编译模块的开始
 # 清除除LOCAL_PATH以外的所有LOCAL_XXX变量
@@ -47,7 +47,8 @@ LOCAL_LDLIBS := \
 
 LOCAL_SRC_FILES := \
                    $(LOCAL_PATH)/com_wangzs_android_jnibase_JNIManager.cpp	    \
-                   $(LOCAL_PATH)/JniCpp.cpp
+                   $(LOCAL_PATH)/JniCpp.cpp	\
+				   $(LOCAL_PATH)/test/test.cpp
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)
     

@@ -5,6 +5,8 @@
 
 #ifndef _Included_com_wangzs_android_jnibase_JNIManager
 #define _Included_com_wangzs_android_jnibase_JNIManager
+
+extern jobject g_context;
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -15,7 +17,7 @@ extern "C" {
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_wangzs_android_jnibase_JNIManager_testJni
-  (JNIEnv *, jclass);
+  (JNIEnv *, jclass, jobject);
 
 #ifdef __cplusplus
 }

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         initUI();
 
-        JNIManager.getInstance().testJni();
+        JNIManager.getInstance().testJni(this);
     }
 
 
