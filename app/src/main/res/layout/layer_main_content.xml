@@ -8,12 +8,53 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/layer_main">
 
-    <Button
+    <com.andexert.library.RippleView
         android:id="@+id/anticrack_tool_btn"
-        android:text="AntiCrackInfo"
-        android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="?android:actionBarSize"
+        app:rv_centered="true"
+        app:rv_rippleDuration="100"
+        app:rv_zoom="true"
+        app:rv_zoomScale="1.03"
+        app:rv_framerate="20"
+        app:rv_color="@color/deeporange_300">
+        <Button
+            android:text="AntiCrackInfo"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:background="@android:color/holo_blue_dark"
+            />
+    </com.andexert.library.RippleView>
+
+
+    <com.andexert.library.RippleView
+        android:id="@+id/dribbble_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@id/anticrack_tool_btn"
+        app:rv_centered="true"
+        app:rv_rippleDuration="100"
+        app:rv_zoom="true"
+        app:rv_zoomScale="1.03"
+        app:rv_framerate="20"
+        app:rv_color="@color/deeporange_300">
+        <Button
+            android:text="Dribbble"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:background="@android:color/holo_blue_dark"
+            />
+    </com.andexert.library.RippleView>
+
 
 </RelativeLayout>

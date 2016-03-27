@@ -9,15 +9,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.andexert.library.RippleView;
+import com.wangzs.android.androidusage.ui.AntiCrackInfoActivity;
+import com.wangzs.android.androidusage.ui.DribbleActivity;
 import com.wangzs.android.jnibase.JNIManager;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button antiCrackToolBtn;
+    RippleView antiCrackToolBtn;
+    RippleView dribbbleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +28,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initUI();
+        setListener();
 
         JNIManager.getInstance().testJni(this);
     }
 
 
     private void initUI() {
-        antiCrackToolBtn = (Button) findViewById(R.id.anticrack_tool_btn);
-        antiCrackToolBtn.setOnClickListener(new OnItemClickListener());
+        antiCrackToolBtn = (RippleView) findViewById(R.id.anticrack_tool_btn);
+        //antiCrackToolBtn.setOnClickListener(new OnItemClickListener());
+        dribbbleBtn = (RippleView) findViewById(R.id.dribbble_btn);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,12 +77,33 @@ public class MainActivity extends AppCompatActivity {
         userMailView.setText("new_user_mail@gmail.com");
     }
 
+
+    private void setListener() {
+        antiCrackToolBtn.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+            @Override
+            public void onComplete(RippleView rippleView) {
+                startActivity(new Intent(MainActivity.this, AntiCrackInfoActivity.class));
+            }
+        });
+
+        dribbbleBtn.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
+            @Override
+            public void onComplete(RippleView rippleView) {
+                startActivity(new Intent(MainActivity.this, DribbleActivity.class));
+            }
+        });
+    }
+
+
     private class OnItemClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.anticrack_tool_btn:
                     startActivity(new Intent(MainActivity.this, AntiCrackInfoActivity.class));
+                    break;
+                case R.id.dribbble_btn:
+                    startActivity(new Intent(MainActivity.this, DribbleActivity.class));
                     break;
             }
         }

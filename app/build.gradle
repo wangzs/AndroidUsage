@@ -24,10 +24,13 @@ android {
 dependencies {
     compile project(':anticrack')
     compile project(':jnibase')
+    compile project(':netbase')
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile rootProject.ext.test.junit
     compile rootProject.ext.androidsupport.compatv7
     compile rootProject.ext.androidsupport.design
     compile rootProject.ext.baselib.logutils
+    compile rootProject.ext.ui.rippleview
+    compile rootProject.ext.ui.circleiv
 }

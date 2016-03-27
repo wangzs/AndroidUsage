@@ -22,4 +22,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile rootProject.ext.test.junit
     compile rootProject.ext.androidsupport.compatv7
+    compile rootProject.ext.net.retrofit
+    compile rootProject.ext.net.retrofit_gson
+    compile rootProject.ext.net.retrofit_rxjava
+    compile rootProject.ext.baselib.gson
+    compile rootProject.ext.baselib.rxjava
+    compile rootProject.ext.baselib.rxandroid
 }

@@ -1,4 +1,4 @@
-package com.wangzs.android.androidusage;
+package com.wangzs.android.androidusage.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.wangzs.android.androidusage.R;
 import com.wangzs.android.anticrack.AntiCrackTools;
 
 import java.io.IOException;
